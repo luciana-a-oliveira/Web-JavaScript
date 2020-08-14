@@ -1,0 +1,144 @@
+#page-landing {
+    background: var(--color-primary); /*cor de fundo*/
+}
+
+#page-landing #container {
+    color: var(--color-text-in-primary); /*cor do texto*/
+}
+
+.logo-container img { /*div onde tem a logo conteiner*/
+    height: 10rem; /*altera o tamanho da imagem*/
+}
+
+.logo-container { /*div onde tem a logo conteiner*/
+    text-align: center; /*tds os textos ficarao alinhados ao centro*/
+    margin-bottom: 3.2rem;
+}
+
+.logo-container h2 {
+    font-weight: 500;
+    font-size: 3.6rem;
+    left: 4.6rem;
+    margin-top: 0.8rem;
+}
+
+
+.hero-image {  /*100% do vl estipulaod p o container no index */
+    width: 100%;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin: 3.2rem 0;
+}
+
+.buttons-container a {
+    width: 30rem;
+    height: 10.4rem;
+   
+    border-radius: 0.8rem; /*arrendondar as bordas*/
+    margin-right: 1.6rem; /*separação entre as caixas*/
+
+    font: 700 2.4rem Archivos; /*fonte padrao arquivo no index*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none; /*remove a linha em baixo do estudar e das aulas*/
+
+    transition: background 0.2s;
+
+    color: var(--color-button-text); /*cor do texto*/
+}
+
+
+.buttons-container a img {
+    width: 4rem;
+    margin-right: 2.4rem;
+}
+
+.buttons-container a.study {
+    background: var(--color-primary-lighter); /*cor da primeira caixa*/
+}
+
+.buttons-container a.study:hover { /*so sera aplicado  qdo o mouse estiver hover ou seja em cima da cx*/
+    background: var(--color-primary-light);   
+}
+
+.buttons-container a.give-classes {
+    background: var(--color-secondary) ; /*cor da segunda cx*/
+    margin-right: 0; /*ajuste de margem apenas nessa cx*/
+}
+
+.buttons-container a.give-classes:hover { /*so sera aplicado  qdo o mouse estiver hover ou seja em cima da cx*/
+    background: var(--color-secondary-dark);   
+}
+
+.total-connections {
+    font-size: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.total-connections img {
+    margin-left: 0.8rem;
+}
+
+@media (max-width: 1100px) {
+    :root {
+        font-size: 40%; /*modifica as medidas rem*/
+    }
+
+    .hero-image {
+        height: 45rem;  
+    }
+}
+
+@media (min-width: 1100px) { /*conf para o descktop, só será usado se a largura for acima essa*/
+    #page-landing #container {
+        max-width: 1100px; /*largura máx*/
+        display: grid; /*o grid ele divide em quadrados a tela*/
+        grid-template-columns: 2fr 1fr 2fr; /*noosso sera 3 col e 2 lin*/
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: 
+        "proffy image image"
+        "button button texting";
+        column-gap: 87px;
+        row-gap: 86px;
+    }
+
+    .logo-container {
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center; /*alinha a logo ao centro do conteiner*/
+        margin: 0;
+    }
+
+    .logo-container img {
+        height: 127px;  
+    }
+
+    .hero-image {
+        grid-area: image;
+        height: 350px;
+    }
+
+    .buttons-container {
+        grid-area: button;
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .total-connections {
+        grid-area: texting;
+        justify-self: end;
+        font-size: 1.2rem;
+    }
+
+
+}

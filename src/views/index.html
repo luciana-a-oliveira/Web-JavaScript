@@ -1,0 +1,55 @@
+<!--html 
+    head - cabeçalho, config do meu doc, 
+    body -corpo, td conteúdo visivel deverá ser escrito aqui-->
+
+ <!DOCTYPE html>
+ <html lang="pt_br"> <!--lan é um atributo, q define a linguagem-->
+ <head>
+     <meta charset="UTF-8"> <!--meta define atributos da pg, charset acentuação-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--adaptações para telas maiores-->
+     <meta name="theme-color" content="#8257E5">
+     <title>Proffy | Sua plataforma de estudos</title>  <!--titulo-->
+
+     <link rel="shortcut icon" href="/images/favicon.png" type="image/png"> <!--icone-->
+
+     <link rel="stylesheet" href="style/main.css">
+     <link rel="stylesheet" href="style/partials/header.css">
+     <link rel="stylesheet" href="style/partials/page-landing.css">
+     <!--chama o css, estilo da pg-->
+    <!--podemos estilizar usando o h1 { color: red} ou atribuindo uma classe as opcoes q queremos mudar ex
+    <button clas= "red"> | .red{ color: red} -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"> <!--buscando fonte no google-->
+ 
+
+</head>
+ <body id="page-landing">
+
+    <div id="container">
+        <div class="logo-container">
+            <img src="/images/logo.svg" alt="Proffy"/>  <!--src caminho da imagem, alt é acessibilidade, ou "legenda" da imagem-->
+            <h2>Sua plataforma de estudos online</h2>
+        </div>
+
+        <img class="hero-image" src="/images/landing.svg" alt="Plataforma de Estudos">
+        
+        <div class="buttons-container">
+            <a class="study" href="/study">
+                <img src="/images/icons/study.svg" alt="Estudar">
+                Estudar
+            </a>
+            <a class="give-classes" href="/give-classes">
+                <img src="/images/icons/give-classes.svg" alt="Dar aulas">
+                Dar aulas
+            </a>
+        </div>
+
+        <p class="total-connections">
+            Total de 200 conexões já realizadas
+            <img src="/images/icons/purple-heart.svg" alt="Coração roxo">
+
+        </p>
+    </div> 
+    
+ </body>
+ </html>   
